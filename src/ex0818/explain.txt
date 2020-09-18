@@ -1,0 +1,24 @@
+ * 파일에 있는 데이터 byte 단위로 읽기
+ FileInputStream ->read()
+
+ * FileInputStream을 속도향상을 높이기 위해서 Buffered를 이용
+  BufferedInputStream 객체 사용 ->read()
+
+ * 파일에 있는 데이터 byte 단위로 쓰기
+ FileOutputStream ->write()
+
+ *FileOutputStream을 속도향상을 높이기 위해서
+ BufferedOutputStream ->write()
+
+
+ex)
+ FileInputStream fis=new FileInputStream("src/ex0818/read.txt");
+ BufferedInputStream bis=new BufferedInputStream(fis);
+ bis.read();
+->close를 fis,bis 둘 다해야함
+
+ BufferedInputStream bis
+	=new BufferedInputStream(new FileInputStream("src/ex0818/read.txt"));
+
+ bis.read();
+ ->bis만 close하면됨.

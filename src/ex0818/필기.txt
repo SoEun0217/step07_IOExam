@@ -1,0 +1,27 @@
+문자 단위로 파일 읽기 ->FileReader ->입출력 향상 ->BufferedReader
+   => new BufferedReader(new FileReader("읽을 파일 경로"));
+
+문자 단위로 파일 쓰기 ->FileWriter ->입출력 향상 ->BufferedWriter
+  =>new BufferedWriter(new FileWriter("저장할 파일 경로"));
+
+*모니터 출력
+ System.out
+
+ *키보드입력
+InputStream is= System.in;//byte단위로 읽기->그냥 사용하기에는 불편함이 있따.
+int i=is.read();//한 바이트 읽기
+
+byte 단위 읽기 ----> 문자 단위 읽기로 변경
+InputStream           Reader  --> InputStreamReader 클래스를 사용
+
+ *InputStreamReader isr=new InputStreamReader(System.in);
+ isr.read();//한 문자 읽기
+
+ *Reader를 Buffered 이용
+BufferedReader br=  new BufferedReader(new InputStreamReader(System.in));
+ String str=br.readLine();// 한줄읽기
+
+MenuBar
+Menu-sub가 있어야함
+MenuItem-바로 실행되는 것
+
